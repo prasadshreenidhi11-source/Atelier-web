@@ -1,0 +1,622 @@
+.signature-property {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  background: #11110f;
+  color: #f4f0e8;
+}
+
+
+/* =========================================
+   STICKY AREA
+========================================= */
+
+.signature-sticky {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #11110f;
+}
+
+
+/* =========================================
+   IMAGE STAGE
+========================================= */
+
+.signature-image-stage {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  will-change: height;
+
+  transition:
+    height 0.08s linear,
+    border-radius 0.1s linear;
+}
+
+
+/* IMAGE */
+
+.signature-image-stage img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  will-change: transform;
+
+  transition: transform 0.08s linear;
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.signature-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 5, 0.78),
+      rgba(5, 6, 5, 0.25) 55%,
+      rgba(5, 6, 5, 0.05)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(5, 5, 4, 0.75),
+      transparent 45%
+    );
+}
+
+
+.signature-image-vignette {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 42%,
+      rgba(0, 0, 0, 0.42)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.signature-title {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 7vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  will-change: transform, opacity;
+}
+
+
+.signature-label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.signature-label span {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signature-label i {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.signature-label strong {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.22em;
+}
+
+
+.signature-location {
+  margin: 0 0 25px;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 0.24em;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+.signature-title h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(85px, 10vw, 170px);
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.065em;
+}
+
+
+.signature-title h2 em {
+  font-style: normal;
+}
+
+
+.signature-title-line {
+  width: 45px;
+  height: 1px;
+
+  margin: 40px 0 25px;
+
+  background: rgba(255, 255, 255, 0.75);
+}
+
+
+.signature-description {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+
+  font-style: italic;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.signature-scroll-indicator {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 5vw;
+  bottom: 14%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.signature-scroll-indicator span {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.25em;
+
+  writing-mode: vertical-rl;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+.signature-scroll-track {
+  width: 1px;
+  height: 80px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  overflow: hidden;
+}
+
+
+.signature-scroll-track div {
+  width: 100%;
+
+  background: #fff;
+
+  transition: height 0.1s linear;
+}
+
+
+/* =========================================
+   INFORMATION SECTION
+========================================= */
+
+.signature-information {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 43%;
+
+  padding: 28px 7vw;
+
+  box-sizing: border-box;
+
+  background: #11110f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  will-change: transform, opacity;
+}
+
+/* =========================================
+   INFO HEADING
+========================================= */
+
+.signature-info-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.signature-info-heading > div span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.signature-info-heading p {
+  margin: 5px 0 0;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 7px;
+  letter-spacing: 0.18em;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.signature-info-number {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 8px;
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.signature-details {
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    0.8fr
+    0.8fr
+    0.8fr;
+
+  margin-top: 18px;
+}
+
+
+.signature-detail {
+  min-height: 62px;
+
+  padding: 0 30px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signature-detail:first-child {
+  padding-left: 0;
+}
+
+.signature-detail:last-child {
+  border-right: 0;
+}
+
+.detail-icon {
+  margin-bottom: 5px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.signature-detail small {
+  margin-bottom: 5px;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 18px;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.signature-detail strong {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.14em;
+}
+
+.signature-info-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 18px;
+}
+
+.signature-info-bottom p {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  line-height: 1.2;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.signature-view-button {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: transparent;
+
+  color: #fff;
+
+  padding: 14px 18px 14px 22px;
+
+  border-radius: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  cursor: pointer;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.signature-view-button strong {
+  font-size: 17px;
+
+  font-weight: 400;
+
+  transition: transform 0.3s ease;
+}
+
+.signature-view-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(255, 255, 255, 0.65);
+
+  transform: translateY(-3px);
+}
+
+.signature-view-button:hover strong {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================
+   BACKGROUND NUMBER
+========================================= */
+
+.signature-bg-number {
+  position: absolute;
+
+  right: -20px;
+  bottom: -30px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 280px;
+
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.025);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .signature-title {
+    left: 6vw;
+  }
+
+  .signature-title h2 {
+    font-size: clamp(75px, 11vw, 125px);
+  }
+
+  .signature-information {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .signature-detail {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .signature-information {
+    height: 43%;
+
+    padding: 22px 22px;
+
+    justify-content: space-between;
+  }
+
+  .signature-info-heading {
+    padding-bottom: 14px;
+  }
+
+  .signature-info-heading > div span {
+    font-size: 19px;
+  }
+
+  .signature-info-heading p {
+    font-size: 6px;
+  }
+
+  .signature-details {
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: 12px;
+  }
+
+  .signature-detail {
+    min-height: 55px;
+
+    padding: 7px 12px;
+  }
+
+  .signature-detail:nth-child(2) {
+    border-right: 0;
+  }
+
+  .signature-detail:nth-child(3),
+  .signature-detail:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .signature-detail:first-child {
+    padding-left: 0;
+  }
+
+  .signature-info-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 12px;
+  }
+
+  .signature-info-bottom p {
+    font-size: 13px;
+
+    line-height: 1.2;
+
+    max-width: 55%;
+  }
+
+  .signature-view-button {
+    padding: 12px 14px;
+
+    font-size: 8px;
+
+    gap: 12px;
+  }
+
+  .signature-view-button strong {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .signature-image-stage,
+  .signature-image-stage img,
+  .signature-title,
+  .signature-information {
+    transition: none !important;
+  }
+}

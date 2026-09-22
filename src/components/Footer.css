@@ -1,0 +1,261 @@
+
+.atelier-footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  background: #11110f;
+  color: #f4f0e8;
+
+  padding: 90px 7vw 28px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.atelier-footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr 1fr;
+
+  gap: 50px;
+
+  padding-bottom: 80px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.atelier-footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.atelier-footer-mark {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+
+  margin-bottom: 18px;
+}
+
+.atelier-footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.atelier-footer-logo strong {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+}
+
+.atelier-footer-logo span {
+  margin-top: 4px;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 7px;
+  letter-spacing: 0.32em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.atelier-footer-brand p {
+  margin: 28px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+  line-height: 1.35;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+.atelier-footer-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 17px;
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.32);
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.atelier-footer-nav,
+.atelier-footer-contact,
+.atelier-footer-social {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.atelier-footer-nav a,
+.atelier-footer-contact a,
+.atelier-footer-social a,
+.atelier-footer-contact span {
+  position: relative;
+
+  color: rgba(244, 240, 232, 0.7);
+
+  text-decoration: none;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 13px;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.atelier-footer-nav a:hover,
+.atelier-footer-contact a:hover,
+.atelier-footer-social a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* =========================================
+   LARGE WORDMARK
+========================================= */
+
+.atelier-footer-wordmark {
+  margin-top: 55px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(100px, 18vw, 280px);
+
+  line-height: 0.72;
+
+  letter-spacing: -0.07em;
+
+  color: rgba(255, 255, 255, 0.045);
+
+  white-space: nowrap;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.atelier-footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding-top: 25px;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.atelier-footer-bottom a {
+  color: rgba(255, 255, 255, 0.42);
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.atelier-footer-bottom a:hover {
+  color: #fff;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .atelier-footer {
+    padding: 65px 22px 25px;
+  }
+
+  .atelier-footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px 30px;
+
+    padding-bottom: 55px;
+  }
+
+  .atelier-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .atelier-footer-brand p {
+    font-size: 14px;
+  }
+
+  .atelier-footer-wordmark {
+    margin-top: 45px;
+
+    font-size: 25vw;
+
+    line-height: 0.8;
+  }
+
+  .atelier-footer-bottom {
+    flex-wrap: wrap;
+
+    font-size: 6px;
+  }
+
+  .atelier-footer-bottom span:nth-child(2) {
+    display: none;
+  }
+
+  .atelier-footer-bottom a {
+    margin-left: auto;
+  }
+}
+
